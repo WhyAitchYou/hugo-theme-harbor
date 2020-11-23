@@ -2,7 +2,7 @@
   <div>
     {{ range $social :=  .Site.Params.social }}
       <a href="{{ $social.url }}" name="{{ $social.name }}"
-        ><em class="{{ $social.icon }}"></em
+        ><em class="{{ $social.icon }}" style="margin: 0 3px 0 0;"></em
       ></a>
     {{ end }}
   </div>
