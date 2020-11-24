@@ -1,6 +1,7 @@
 window.onload = function () {
   var toggle = document.getElementById('dark-mode-toggle')
   var darkTheme = document.getElementById('dark-mode-theme')
+  var iconImage = document.getElementById('icon-image')
 
   if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
     setTheme(localStorage.getItem('dark-mode-storage') || 'dark')
@@ -21,9 +22,11 @@ window.onload = function () {
     if (mode === 'dark') {
       darkTheme.disabled = false
       toggle.className = 'fas fa-sun'
+	  iconImage.src = 'https://www.y-hu.dev/images/yang.png'
     } else if (mode === 'light') {
       darkTheme.disabled = true
       toggle.className = 'fas fa-moon'
+	  iconImage.src = 'https://www.y-hu.dev/images/hu.png'
     }
   }
 }
